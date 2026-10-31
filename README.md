@@ -71,19 +71,6 @@ cc_extract/
 └── README.md
 ```
 
-## Tests
-
-```bash
-python3 -m unittest discover -s tests -v
-```
-
-Les tests couvrent la validation Luhn, la reconnaissance de marque, le
-masquage, l'extraction exp/cvv, les faux positifs, et surtout le
-pipeline complet sur `examples/demo.pcap` qui vérifie que les 4 cas
-difficiles (Ethernet, VLAN, SLL, carte coupée entre deux paquets TCP)
-sont bien détectés — pour éviter une régression silencieuse comme
-celle qu'on a trouvée dans PCredz.
-
 ## Limites connues
 
 - Encapsulations gérées : Ethernet (+ VLAN 802.1Q/QinQ), SLL/SLL2
